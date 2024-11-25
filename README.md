@@ -15,3 +15,26 @@ This repository aims to serve as a centralized hub for developing analytics tool
 COO: Bruce Haryali  
 
 ### Questions:
+Business Request- 1: City-Level Fare and Trip Summary Report
+Generate a report that displays the total trips, average fare per km, average fare per trip, and the percentage contribution of each city's trips to the overall trips. This report will help in assessing trip volume, pricing efficiency, and each city's contribution to the overall trip count.  
+
+Fields:
+- city name
+- totaI_trips
+- avg_fare_per_km
+- avg fare per trip
+- %_contribution_to_totaI_trips
+________________________________
+Business Request-2: MonthIyCity-Level Trips Target Performance Report  
+Generate a report that evaluates the target performance fortrips at the monthly and city level. For each city and month, compare theactual total trips with the target trips and categorise the performance as follows:
+ • Ifactual trips are greater than target trips, mark it as "Above Target".
+ • Ifactual trips are less than orequal to target trips, mark it as "Below Target".
+ Additionally, calculate the% difference between actual and target trips to quantify the
+ performance gap.
+ Fields:
+ • City_name
+ • month name
+ • actual trips
+ • target_trips
+ • performance status
+ • % differenc
