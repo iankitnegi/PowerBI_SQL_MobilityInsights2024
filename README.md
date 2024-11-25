@@ -84,6 +84,7 @@ Generate a report that calculates two metrics:
 2.	City-wide Repeat Passenger Rate: Calculate the overall repeat passenger rate for each city, considering all passengers across months.  
 
 These metrics will provide insights into monthly repeat trends as well as the overall repeat behaviour for each city.      
+
 Fields:   
 - city name
 - month
