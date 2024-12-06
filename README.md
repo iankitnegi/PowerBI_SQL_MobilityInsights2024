@@ -108,7 +108,16 @@ Purpose: This table provides city-specific details, enabling location-based anal
 - city_id: A unique identifier for each city, using a standardized code (e.g., RJ01 for Jaipur).
 - city_name: The name of the city where Goodcabs operates (e.g., Jaipur, Lucknow), used for location-based grouping and insights.
 
-
+SELECT
+	c.city_name, 
+	COUNT(*) AS total_trips,
+	ROUND(SUM(t.fare_amount)/SUM(t.distance_travelled_km),2) AS avg_fare_per_km,
+    ROUND(SUM(t.fare_amount)/COUNT(*), 2) AS avg_fare_per_trip,
+    ROUND(COUNT(*)/(SELECT COUNT(*) FROM fact_trips)*100, 2) AS pct_contributtion
+FROM dim_city c
+JOIN fact_trips t ON c.city_id=t.city_id
+GROUP BY city_name
+ORDER BY 5 DESC;
 
 2. dim_date
 Purpose: This table provides date-specific details that enable time-based grouping and analysis, helping to identify patterns across days, months, and weekends versus weekdays.
